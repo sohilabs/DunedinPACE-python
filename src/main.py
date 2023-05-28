@@ -46,4 +46,6 @@ r_output_df = pd.DataFrame(
 )
 print(f"R output to match:\n{r_output_df}\n")
 # Compare for each row value, the abs difference between the R and Python output is less than 1e-3
-print(f"Absolute tolerance below 1e-3:\n{(pace_values - r_output_df).abs() < 1e-3}")
+print(
+    f"Absolute diff tolerance below 1e-3:\n{(pace_values - r_output_df).abs() < 1e-3}"
+)
